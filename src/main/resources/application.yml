@@ -1,0 +1,37 @@
+server:
+  port: 8808
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/plan
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+plan-api:
+ Messages:
+   planSaveSuccessfully:   Plan Saved Successfully
+   planSaveFailed:   Plan Save Failed
+   planUpdateSuccessfully: Plan Updated Successfully
+   planUpdateFailed: Plan Update Failed
+   planDeleteSuccessfully: Plan Deleted Successfully
+   planDeleteFailed: Plan Delete Failed
+   planStatusChangeSuccessfully: Plan Status Changed Successfully
+   planStatusChangeFailed: Plan Status Change Failed    
+   
+logging:
+  file:
+    name: app.log
+    max-size:
+      10MB
+    max-history: 30
+    total-size-cap:
+      10MB
+  pattern:
+    rolling-file-name: app-%d{yyyy-MM-dd}.%i.log
+                    
